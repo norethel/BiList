@@ -1,4 +1,5 @@
 var annotated =
 [
-    [ "SBiElement", "structSBiElement.html", "structSBiElement" ]
+    [ "SBiElement", "structSBiElement.html", "structSBiElement" ],
+    [ "SBiList", "structSBiList.html", "structSBiList" ]
 ];

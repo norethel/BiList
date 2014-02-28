@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Bidirectional Intrusive List: BiList/inc/bi_element.h Source File</title>
+<title>Bidirectional Intrusive List: BiList/inc/bi_list.h Source File</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -89,51 +89,53 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('bi__element_8h.html','');
+  initNavTree('bi__list_8h.html','');
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">BiList/inc/bi_element.h</div>  </div>
+<div class="title">BiList/inc/bi_list.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="bi__element_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
-<a name="l00010"></a>00010 <span class="preprocessor">#ifndef __BI_ELEMENT_H__</span>
-<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#define __BI_ELEMENT_H__</span>
+<a href="bi__list_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00010"></a>00010 <span class="preprocessor">#ifndef __BI_LIST_H__</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#define __BI_LIST_H__</span>
 <a name="l00012"></a>00012 <span class="preprocessor"></span>
 <a name="l00013"></a>00013 <span class="preprocessor">#ifdef __cplusplus</span>
 <a name="l00014"></a>00014 <span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span>
 <a name="l00015"></a>00015 {
 <a name="l00016"></a>00016 <span class="preprocessor">#endif</span>
 <a name="l00017"></a>00017 <span class="preprocessor"></span>
-<a name="l00019"></a><a class="code" href="bi__element_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">00019</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structSBiElement.html">SBiElement</a> <a class="code" href="structSBiElement.html">TBiElement</a>;
+<a name="l00019"></a><a class="code" href="bi__list_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">00019</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structSBiElement.html">SBiElement</a> <a class="code" href="structSBiElement.html">TBiElement</a>;
 <a name="l00020"></a>00020 
-<a name="l00022"></a><a class="code" href="structSBiElement.html">00022</a> <span class="keyword">struct </span><a class="code" href="structSBiElement.html">SBiElement</a>
-<a name="l00023"></a>00023 {
-<a name="l00024"></a><a class="code" href="structSBiElement.html#ad2e6848f39a13f0608ea5bb1f1f24ef1">00024</a> <a class="code" href="structSBiElement.html">TBiElement</a>* <a class="code" href="structSBiElement.html#ad2e6848f39a13f0608ea5bb1f1f24ef1" title="previous list element">prev</a>; 
-<a name="l00025"></a><a class="code" href="structSBiElement.html#a66428d91c4bf757af930ca4094f41ad9">00025</a> <a class="code" href="structSBiElement.html">TBiElement</a>* <a class="code" href="structSBiElement.html#a66428d91c4bf757af930ca4094f41ad9" title="next list element">next</a>; 
-<a name="l00026"></a>00026 };
-<a name="l00027"></a>00027 
-<a name="l00033"></a>00033 <span class="keywordtype">void</span> <a class="code" href="bi__element_8h.html#a6ea693cab94167925de21b6b2f0376c6" title="constructs list element">bi_element_ctor</a>(<a class="code" href="structSBiElement.html">TBiElement</a>* <span class="keyword">const</span> _self);
-<a name="l00034"></a>00034 
-<a name="l00042"></a>00042 <span class="keywordtype">void</span> <a class="code" href="bi__element_8h.html#aebbc21ddd6316f98c8afcd6c918e615a" title="constructs list element from another one">bi_element_cctor</a>(<a class="code" href="structSBiElement.html">TBiElement</a>* <span class="keyword">const</span> _self, <a class="code" href="structSBiElement.html">TBiElement</a>* <span class="keyword">const</span> _element);
-<a name="l00043"></a>00043 
-<a name="l00049"></a>00049 <span class="keywordtype">void</span> <a class="code" href="bi__element_8h.html#ac843aa3877c16ba97cbf8f921b51a58e" title="destructs list element">bi_element_dtor</a>(<a class="code" href="structSBiElement.html">TBiElement</a>* <span class="keyword">const</span> _self);
-<a name="l00050"></a>00050 
-<a name="l00057"></a>00057 <span class="keywordtype">int</span> <a class="code" href="bi__element_8h.html#a1611661c81ffdd12c5b120c29e6f048c" title="checks if list element is linked">bi_element_linked</a>(<a class="code" href="structSBiElement.html">TBiElement</a>* <span class="keyword">const</span> _self);
-<a name="l00058"></a>00058 
-<a name="l00069"></a>00069 <span class="keywordtype">void</span> <a class="code" href="bi__element_8h.html#abfc4eadef29c0d959494fa76f3dcc47d" title="links _self with _element with _element as preceding one">bi_element_link</a>(<a class="code" href="structSBiElement.html">TBiElement</a>* <span class="keyword">const</span> _self, <a class="code" href="structSBiElement.html">TBiElement</a>* <span class="keyword">const</span> _element);
+<a name="l00024"></a><a class="code" href="structSBiList.html">00024</a> <span class="keyword">struct </span><a class="code" href="structSBiList.html">SBiList</a>
+<a name="l00025"></a>00025 {
+<a name="l00026"></a><a class="code" href="structSBiList.html#a44736ef707dcb50653b1ce09eb8a9078">00026</a> <a class="code" href="structSBiElement.html">TBiElement</a>* <a class="code" href="structSBiList.html#a44736ef707dcb50653b1ce09eb8a9078" title="head of the list">head</a>; 
+<a name="l00027"></a><a class="code" href="structSBiList.html#a7f46060ee471cb0f6fc88d381a3af593">00027</a> <a class="code" href="structSBiElement.html">TBiElement</a>* <a class="code" href="structSBiList.html#a7f46060ee471cb0f6fc88d381a3af593" title="tail of the list">tail</a>; 
+<a name="l00028"></a>00028 };
+<a name="l00029"></a>00029 
+<a name="l00031"></a><a class="code" href="bi__list_8h.html#a022731eadf7426e98e6b164fdc3369c2">00031</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structSBiList.html">SBiList</a> <a class="code" href="structSBiList.html">TBiList</a>;
+<a name="l00032"></a>00032 
+<a name="l00039"></a>00039 <span class="keywordtype">void</span> <a class="code" href="bi__list_8h.html#ac05bb3c41e5bc0036f327ef75b4e8c6f" title="constructs empty list">bi_list_ctor</a>(<a class="code" href="structSBiList.html">TBiList</a>* <span class="keyword">const</span> _self);
+<a name="l00040"></a>00040 
+<a name="l00052"></a>00052 <span class="keywordtype">void</span> <a class="code" href="bi__list_8h.html#a7843f5bdd9569b29c03ba82b02d8253e" title="constructs list from another one WARNING: it is in user responsibility to release _list otherwise it ...">bi_list_cctor</a>(<a class="code" href="structSBiList.html">TBiList</a>* <span class="keyword">const</span> _self, <a class="code" href="structSBiList.html">TBiList</a>* <span class="keyword">const</span> _list);
+<a name="l00053"></a>00053 
+<a name="l00060"></a>00060 <span class="keywordtype">void</span> <a class="code" href="bi__list_8h.html#ac25532cc7f8e6d702dffcb8a1cf8e409" title="destructs list">bi_list_dtor</a>(<a class="code" href="structSBiList.html">TBiList</a>* <span class="keyword">const</span> _self);
+<a name="l00061"></a>00061 
+<a name="l00069"></a>00069 <span class="keywordtype">int</span> <a class="code" href="bi__list_8h.html#ae365192d392f36ccde6cdae587735c23" title="checks if list is empty">bi_list_empty</a>(<a class="code" href="structSBiList.html">TBiList</a>* <span class="keyword">const</span> _self);
 <a name="l00070"></a>00070 
-<a name="l00077"></a>00077 <span class="keywordtype">void</span> <a class="code" href="bi__element_8h.html#a781d64d6d786738d05a610c07f3406b1" title="links _self with _self ">bi_element_link_self</a>(<a class="code" href="structSBiElement.html">TBiElement</a>* <span class="keyword">const</span> _self);
-<a name="l00078"></a>00078 
-<a name="l00085"></a>00085 <span class="keywordtype">void</span> <a class="code" href="bi__element_8h.html#a70489973d72518af24363c333c7aabfd" title="unlinks list element">bi_element_unlink</a>(<a class="code" href="structSBiElement.html">TBiElement</a>* <span class="keyword">const</span> _self);
-<a name="l00086"></a>00086 
-<a name="l00087"></a>00087 <span class="preprocessor">#ifdef __cplusplus</span>
-<a name="l00088"></a>00088 <span class="preprocessor"></span>}
-<a name="l00089"></a>00089 <span class="preprocessor">#endif</span>
-<a name="l00090"></a>00090 <span class="preprocessor"></span>
-<a name="l00091"></a>00091 <span class="preprocessor">#endif</span>
-<a name="l00092"></a>00092 <span class="preprocessor"></span>
+<a name="l00082"></a>00082 <span class="keywordtype">void</span> <a class="code" href="bi__list_8h.html#aa53e556e8aefaf5d1edcb5c74290b971" title="inserts element at the end of the list">bi_list_push_back</a>(<a class="code" href="structSBiList.html">TBiList</a>* <span class="keyword">const</span> _self, <a class="code" href="structSBiElement.html">TBiElement</a>* <span class="keyword">const</span> _element);
+<a name="l00083"></a>00083 
+<a name="l00092"></a>00092 <a class="code" href="structSBiElement.html">TBiElement</a>* <a class="code" href="bi__list_8h.html#a53d52e0166f2ca140e93b23256ea2e2f" title="takes off the last element from the list">bi_list_pop_back</a>(<a class="code" href="structSBiList.html">TBiList</a>* <span class="keyword">const</span> _self);
+<a name="l00093"></a>00093 
+<a name="l00101"></a>00101 <a class="code" href="structSBiElement.html">TBiElement</a>* <a class="code" href="bi__list_8h.html#a14cc816069c35df41fcb1ad9ea100675" title="returns pointer to last element in the list">bi_list_back</a>(<a class="code" href="structSBiList.html">TBiList</a>* <span class="keyword">const</span> _self);
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103 <span class="preprocessor">#ifdef __cplusplus</span>
+<a name="l00104"></a>00104 <span class="preprocessor"></span>}
+<a name="l00105"></a>00105 <span class="preprocessor">#endif</span>
+<a name="l00106"></a>00106 <span class="preprocessor"></span>
+<a name="l00107"></a>00107 <span class="preprocessor">#endif</span>
+<a name="l00108"></a>00108 <span class="preprocessor"></span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -152,7 +154,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="bi__element_8h.html">bi_element.h</a>      </li>
+      <li class="navelem"><a class="el" href="bi__list_8h.html">bi_list.h</a>      </li>
 
     <li class="footer">Generated on Fri Feb 28 2014 16:02:19 for Bidirectional Intrusive List by
     <a href="http://www.doxygen.org/index.html">

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Bidirectional Intrusive List: BiList/inc/bi_assert.h Source File</title>
+<title>Bidirectional Intrusive List: SBiList Struct Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -52,8 +52,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
-      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -74,8 +74,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="classes.html"><span>Data&#160;Structure&#160;Index</span></a></li>
+      <li><a href="functions.html"><span>Data&#160;Fields</span></a></li>
     </ul>
   </div>
 </div>
@@ -89,54 +90,63 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('bi__assert_8h.html','');
+  initNavTree('structSBiList.html','');
 </script>
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">BiList/inc/bi_assert.h</div>  </div>
+<div class="title">SBiList Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="bi__assert_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
-<a name="l00010"></a>00010 <span class="preprocessor">#ifndef __BI_ASSERT_H__</span>
-<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#define __BI_ASSERT_H__</span>
-<a name="l00012"></a>00012 <span class="preprocessor"></span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016 <span class="preprocessor">#ifdef __cplusplus</span>
-<a name="l00017"></a>00017 <span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span>
-<a name="l00018"></a>00018 {
-<a name="l00019"></a>00019 <span class="preprocessor">#endif</span>
-<a name="l00020"></a>00020 <span class="preprocessor"></span>
-<a name="l00021"></a><a class="code" href="bi__assert_8h.html#ad9f2db71e103991db7d6f001a955285f">00021</a> <span class="preprocessor">#define REQUIRE(expr) \</span>
-<a name="l00022"></a>00022 <span class="preprocessor">        if (0 == (expr)) \</span>
-<a name="l00023"></a>00023 <span class="preprocessor">        { \</span>
-<a name="l00024"></a>00024 <span class="preprocessor">                printf(&quot;%s:%d : REQUIRE: assertion failed: %s&quot;, __FILE__, __LINE__, #expr); \</span>
-<a name="l00025"></a>00025 <span class="preprocessor">                exit(-1); \</span>
-<a name="l00026"></a>00026 <span class="preprocessor">        }</span>
-<a name="l00027"></a>00027 <span class="preprocessor"></span>
-<a name="l00028"></a><a class="code" href="bi__assert_8h.html#a4d20f8c0701894cac4dab32c899d9789">00028</a> <span class="preprocessor">#define CHECK(expr) \</span>
-<a name="l00029"></a>00029 <span class="preprocessor">        if (0 == (expr)) \</span>
-<a name="l00030"></a>00030 <span class="preprocessor">        { \</span>
-<a name="l00031"></a>00031 <span class="preprocessor">                printf(&quot;%s:%d : CHECK: assertion failed: %s&quot;, __FILE__, __LINE__, #expr); \</span>
-<a name="l00032"></a>00032 <span class="preprocessor">                exit(-1); \</span>
-<a name="l00033"></a>00033 <span class="preprocessor">        }</span>
-<a name="l00034"></a>00034 <span class="preprocessor"></span>
-<a name="l00035"></a><a class="code" href="bi__assert_8h.html#afb70bbb6de1ca63ed5eed1390510cb71">00035</a> <span class="preprocessor">#define ENSURE(expr) \</span>
-<a name="l00036"></a>00036 <span class="preprocessor">        if (0 == (expr)) \</span>
-<a name="l00037"></a>00037 <span class="preprocessor">        { \</span>
-<a name="l00038"></a>00038 <span class="preprocessor">                printf(&quot;%s:%d : ENSURE: assertion failed: %s&quot;, __FILE__, __LINE__, #expr); \</span>
-<a name="l00039"></a>00039 <span class="preprocessor">                exit(-1); \</span>
-<a name="l00040"></a>00040 <span class="preprocessor">        }</span>
-<a name="l00041"></a>00041 <span class="preprocessor"></span>
-<a name="l00042"></a>00042 <span class="preprocessor">#ifdef __cplusplus</span>
-<a name="l00043"></a>00043 <span class="preprocessor"></span>}
-<a name="l00044"></a>00044 <span class="preprocessor">#endif</span>
-<a name="l00045"></a>00045 <span class="preprocessor"></span>
-<a name="l00046"></a>00046 <span class="preprocessor">#endif</span>
-<a name="l00047"></a>00047 <span class="preprocessor"></span>
-</pre></div></div><!-- contents -->
+<!-- doxytag: class="SBiList" -->
+<p><code>#include &lt;<a class="el" href="bi__list_8h_source.html">bi_list.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="bi__element_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">TBiElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSBiList.html#a44736ef707dcb50653b1ce09eb8a9078">head</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">head of the list  <a href="#a44736ef707dcb50653b1ce09eb8a9078"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="bi__element_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">TBiElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSBiList.html#a7f46060ee471cb0f6fc88d381a3af593">tail</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">tail of the list  <a href="#a7f46060ee471cb0f6fc88d381a3af593"></a><br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Bidirectional intrusive list structure </p>
+</div><hr/><h2>Field Documentation</h2>
+<a class="anchor" id="a44736ef707dcb50653b1ce09eb8a9078"></a><!-- doxytag: member="SBiList::head" ref="a44736ef707dcb50653b1ce09eb8a9078" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bi__element_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">TBiElement</a>* <a class="el" href="structSBiList.html#a44736ef707dcb50653b1ce09eb8a9078">SBiList::head</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>head of the list </p>
+
+</div>
+</div>
+<a class="anchor" id="a7f46060ee471cb0f6fc88d381a3af593"></a><!-- doxytag: member="SBiList::tail" ref="a7f46060ee471cb0f6fc88d381a3af593" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bi__element_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">TBiElement</a>* <a class="el" href="structSBiList.html#a7f46060ee471cb0f6fc88d381a3af593">SBiList::tail</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>tail of the list </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>BiList/inc/<a class="el" href="bi__list_8h_source.html">bi_list.h</a></li>
+</ul>
+</div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -154,7 +164,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="bi__assert_8h.html">bi_assert.h</a>      </li>
+      <li class="navelem"><a class="el" href="structSBiList.html">SBiList</a>      </li>
 
     <li class="footer">Generated on Fri Feb 28 2014 16:02:19 for Bidirectional Intrusive List by
     <a href="http://www.doxygen.org/index.html">
