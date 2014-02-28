@@ -1,0 +1,202 @@
+\hypertarget{bi__element_8h}{\section{\-Bi\-List/inc/bi\-\_\-element.h \-File \-Reference}
+\label{bi__element_8h}\index{\-Bi\-List/inc/bi\-\_\-element.\-h@{\-Bi\-List/inc/bi\-\_\-element.\-h}}
+}
+\subsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structSBiElement}{\-S\-Bi\-Element}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structSBiElement}{\-S\-Bi\-Element} \hyperlink{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\-T\-Bi\-Element}
+\item 
+void \hyperlink{bi__element_8h_a6ea693cab94167925de21b6b2f0376c6}{bi\-\_\-element\-\_\-ctor} (\hyperlink{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\-T\-Bi\-Element} $\ast$const \-\_\-self)
+\begin{DoxyCompactList}\small\item\em constructs list element \end{DoxyCompactList}\item 
+void \hyperlink{bi__element_8h_aebbc21ddd6316f98c8afcd6c918e615a}{bi\-\_\-element\-\_\-cctor} (\hyperlink{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\-T\-Bi\-Element} $\ast$const \-\_\-self, \hyperlink{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\-T\-Bi\-Element} $\ast$const \-\_\-element)
+\begin{DoxyCompactList}\small\item\em constructs list element from another one \end{DoxyCompactList}\item 
+void \hyperlink{bi__element_8h_ac843aa3877c16ba97cbf8f921b51a58e}{bi\-\_\-element\-\_\-dtor} (\hyperlink{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\-T\-Bi\-Element} $\ast$const \-\_\-self)
+\begin{DoxyCompactList}\small\item\em destructs list element \end{DoxyCompactList}\item 
+int \hyperlink{bi__element_8h_a1611661c81ffdd12c5b120c29e6f048c}{bi\-\_\-element\-\_\-linked} (\hyperlink{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\-T\-Bi\-Element} $\ast$const \-\_\-self)
+\begin{DoxyCompactList}\small\item\em checks if list element is linked \end{DoxyCompactList}\item 
+void \hyperlink{bi__element_8h_abfc4eadef29c0d959494fa76f3dcc47d}{bi\-\_\-element\-\_\-link} (\hyperlink{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\-T\-Bi\-Element} $\ast$const \-\_\-self, \hyperlink{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\-T\-Bi\-Element} $\ast$const \-\_\-element)
+\begin{DoxyCompactList}\small\item\em links {\bfseries \-\_\-self} with {\bfseries \-\_\-element} with {\bfseries \-\_\-element} as preceding one \end{DoxyCompactList}\item 
+void \hyperlink{bi__element_8h_a781d64d6d786738d05a610c07f3406b1}{bi\-\_\-element\-\_\-link\-\_\-self} (\hyperlink{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\-T\-Bi\-Element} $\ast$const \-\_\-self)
+\begin{DoxyCompactList}\small\item\em links {\bfseries \-\_\-self} with {\bfseries \-\_\-self} \end{DoxyCompactList}\item 
+void \hyperlink{bi__element_8h_a70489973d72518af24363c333c7aabfd}{bi\-\_\-element\-\_\-unlink} (\hyperlink{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\-T\-Bi\-Element} $\ast$const \-\_\-self)
+\begin{DoxyCompactList}\small\item\em unlinks list element \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\begin{DoxyDate}{\-Date}
+\-Feb 20, 2014 
+\end{DoxyDate}
+\begin{DoxyAuthor}{\-Author}
+norethel 
+\end{DoxyAuthor}
+
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\index{bi\-\_\-element.\-h@{bi\-\_\-element.\-h}!\-T\-Bi\-Element@{\-T\-Bi\-Element}}
+\index{\-T\-Bi\-Element@{\-T\-Bi\-Element}!bi_element.h@{bi\-\_\-element.\-h}}
+\subsubsection[{\-T\-Bi\-Element}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-S\-Bi\-Element} {\bf \-T\-Bi\-Element}}}\label{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}
+typedef for \hyperlink{structSBiElement}{\-S\-Bi\-Element} structure 
+
+\subsection{\-Function \-Documentation}
+\hypertarget{bi__element_8h_aebbc21ddd6316f98c8afcd6c918e615a}{\index{bi\-\_\-element.\-h@{bi\-\_\-element.\-h}!bi\-\_\-element\-\_\-cctor@{bi\-\_\-element\-\_\-cctor}}
+\index{bi\-\_\-element\-\_\-cctor@{bi\-\_\-element\-\_\-cctor}!bi_element.h@{bi\-\_\-element.\-h}}
+\subsubsection[{bi\-\_\-element\-\_\-cctor}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf bi\-\_\-element\-\_\-cctor} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-T\-Bi\-Element} $\ast$const}]{\-\_\-self, }
+\item[{{\bf \-T\-Bi\-Element} $\ast$const}]{\-\_\-element}
+\end{DoxyParamCaption}
+)}}\label{bi__element_8h_aebbc21ddd6316f98c8afcd6c918e615a}
+
+
+constructs list element from another one 
+
+\begin{DoxyPrecond}{\-Precondition}
+0 != \-\_\-self 
+
+0 != \-\_\-element 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-\_\-self} & pointer to list element to be constructed \\
+\hline
+{\em \-\_\-element} & pointer to list element from which {\bfseries \-\_\-self} will be constructed \\
+\hline
+\end{DoxyParams}
+\hypertarget{bi__element_8h_a6ea693cab94167925de21b6b2f0376c6}{\index{bi\-\_\-element.\-h@{bi\-\_\-element.\-h}!bi\-\_\-element\-\_\-ctor@{bi\-\_\-element\-\_\-ctor}}
+\index{bi\-\_\-element\-\_\-ctor@{bi\-\_\-element\-\_\-ctor}!bi_element.h@{bi\-\_\-element.\-h}}
+\subsubsection[{bi\-\_\-element\-\_\-ctor}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf bi\-\_\-element\-\_\-ctor} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-T\-Bi\-Element} $\ast$const}]{\-\_\-self}
+\end{DoxyParamCaption}
+)}}\label{bi__element_8h_a6ea693cab94167925de21b6b2f0376c6}
+
+
+constructs list element 
+
+\begin{DoxyPrecond}{\-Precondition}
+0 != \-\_\-self 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-\_\-self} & pointer to list element to be constructed \\
+\hline
+\end{DoxyParams}
+\hypertarget{bi__element_8h_ac843aa3877c16ba97cbf8f921b51a58e}{\index{bi\-\_\-element.\-h@{bi\-\_\-element.\-h}!bi\-\_\-element\-\_\-dtor@{bi\-\_\-element\-\_\-dtor}}
+\index{bi\-\_\-element\-\_\-dtor@{bi\-\_\-element\-\_\-dtor}!bi_element.h@{bi\-\_\-element.\-h}}
+\subsubsection[{bi\-\_\-element\-\_\-dtor}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf bi\-\_\-element\-\_\-dtor} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-T\-Bi\-Element} $\ast$const}]{\-\_\-self}
+\end{DoxyParamCaption}
+)}}\label{bi__element_8h_ac843aa3877c16ba97cbf8f921b51a58e}
+
+
+destructs list element 
+
+\begin{DoxyPrecond}{\-Precondition}
+0 != \-\_\-self 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-\_\-self} & pointer to list element to be destructed \\
+\hline
+\end{DoxyParams}
+\hypertarget{bi__element_8h_abfc4eadef29c0d959494fa76f3dcc47d}{\index{bi\-\_\-element.\-h@{bi\-\_\-element.\-h}!bi\-\_\-element\-\_\-link@{bi\-\_\-element\-\_\-link}}
+\index{bi\-\_\-element\-\_\-link@{bi\-\_\-element\-\_\-link}!bi_element.h@{bi\-\_\-element.\-h}}
+\subsubsection[{bi\-\_\-element\-\_\-link}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf bi\-\_\-element\-\_\-link} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-T\-Bi\-Element} $\ast$const}]{\-\_\-self, }
+\item[{{\bf \-T\-Bi\-Element} $\ast$const}]{\-\_\-element}
+\end{DoxyParamCaption}
+)}}\label{bi__element_8h_abfc4eadef29c0d959494fa76f3dcc47d}
+
+
+links {\bfseries \-\_\-self} with {\bfseries \-\_\-element} with {\bfseries \-\_\-element} as preceding one 
+
+\begin{DoxyPrecond}{\-Precondition}
+0 != \-\_\-self 
+
+0 != \-\_\-element 
+
+{\bfseries \-\_\-element} need to be linked 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+\-\_\-self is linked 
+
+\-\_\-element is linked 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-\_\-self} & pointer to list element to be linked \\
+\hline
+{\em \-\_\-element} & pointer to list element with which {\bfseries \-\_\-element} will be linked \\
+\hline
+\end{DoxyParams}
+\hypertarget{bi__element_8h_a781d64d6d786738d05a610c07f3406b1}{\index{bi\-\_\-element.\-h@{bi\-\_\-element.\-h}!bi\-\_\-element\-\_\-link\-\_\-self@{bi\-\_\-element\-\_\-link\-\_\-self}}
+\index{bi\-\_\-element\-\_\-link\-\_\-self@{bi\-\_\-element\-\_\-link\-\_\-self}!bi_element.h@{bi\-\_\-element.\-h}}
+\subsubsection[{bi\-\_\-element\-\_\-link\-\_\-self}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf bi\-\_\-element\-\_\-link\-\_\-self} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-T\-Bi\-Element} $\ast$const}]{\-\_\-self}
+\end{DoxyParamCaption}
+)}}\label{bi__element_8h_a781d64d6d786738d05a610c07f3406b1}
+
+
+links {\bfseries \-\_\-self} with {\bfseries \-\_\-self} 
+
+\begin{DoxyPrecond}{\-Precondition}
+0 != \-\_\-self 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+\-\_\-self is linked 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-\_\-self} & pointer to list element to be linked \\
+\hline
+\end{DoxyParams}
+\hypertarget{bi__element_8h_a1611661c81ffdd12c5b120c29e6f048c}{\index{bi\-\_\-element.\-h@{bi\-\_\-element.\-h}!bi\-\_\-element\-\_\-linked@{bi\-\_\-element\-\_\-linked}}
+\index{bi\-\_\-element\-\_\-linked@{bi\-\_\-element\-\_\-linked}!bi_element.h@{bi\-\_\-element.\-h}}
+\subsubsection[{bi\-\_\-element\-\_\-linked}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf bi\-\_\-element\-\_\-linked} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-T\-Bi\-Element} $\ast$const}]{\-\_\-self}
+\end{DoxyParamCaption}
+)}}\label{bi__element_8h_a1611661c81ffdd12c5b120c29e6f048c}
+
+
+checks if list element is linked 
+
+\begin{DoxyPrecond}{\-Precondition}
+0 != \-\_\-self 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-\_\-self} & pointer to list element needed to be checked for linkage \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+value != 0 if list element is linked (usually 1), otherwise 0 
+\end{DoxyReturn}
+\hypertarget{bi__element_8h_a70489973d72518af24363c333c7aabfd}{\index{bi\-\_\-element.\-h@{bi\-\_\-element.\-h}!bi\-\_\-element\-\_\-unlink@{bi\-\_\-element\-\_\-unlink}}
+\index{bi\-\_\-element\-\_\-unlink@{bi\-\_\-element\-\_\-unlink}!bi_element.h@{bi\-\_\-element.\-h}}
+\subsubsection[{bi\-\_\-element\-\_\-unlink}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf bi\-\_\-element\-\_\-unlink} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-T\-Bi\-Element} $\ast$const}]{\-\_\-self}
+\end{DoxyParamCaption}
+)}}\label{bi__element_8h_a70489973d72518af24363c333c7aabfd}
+
+
+unlinks list element 
+
+\begin{DoxyPrecond}{\-Precondition}
+0 != \-\_\-self 
+
+{\bfseries \-\_\-self} need to be linked 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-\_\-self} & pointer to list element to be unlinked \\
+\hline
+\end{DoxyParams}

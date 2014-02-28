@@ -1,0 +1,76 @@
+\hypertarget{bi__assert_8h}{\section{\-Bi\-List/inc/bi\-\_\-assert.h \-File \-Reference}
+\label{bi__assert_8h}\index{\-Bi\-List/inc/bi\-\_\-assert.\-h@{\-Bi\-List/inc/bi\-\_\-assert.\-h}}
+}
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+\subsection*{\-Defines}
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{bi__assert_8h_ad9f2db71e103991db7d6f001a955285f}{\-R\-E\-Q\-U\-I\-R\-E}(expr)
+\item 
+\#define \hyperlink{bi__assert_8h_a4d20f8c0701894cac4dab32c899d9789}{\-C\-H\-E\-C\-K}(expr)
+\item 
+\#define \hyperlink{bi__assert_8h_afb70bbb6de1ca63ed5eed1390510cb71}{\-E\-N\-S\-U\-R\-E}(expr)
+\end{DoxyCompactItemize}
+
+
+
+\subsection{\-Detailed \-Description}
+\begin{DoxyDate}{\-Date}
+\-Feb 21, 2014 
+\end{DoxyDate}
+\begin{DoxyAuthor}{\-Author}
+norethel 
+\end{DoxyAuthor}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{bi__assert_8h_a4d20f8c0701894cac4dab32c899d9789}{\index{bi\-\_\-assert.\-h@{bi\-\_\-assert.\-h}!\-C\-H\-E\-C\-K@{\-C\-H\-E\-C\-K}}
+\index{\-C\-H\-E\-C\-K@{\-C\-H\-E\-C\-K}!bi_assert.h@{bi\-\_\-assert.\-h}}
+\subsubsection[{\-C\-H\-E\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-H\-E\-C\-K}(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)}}\label{bi__assert_8h_a4d20f8c0701894cac4dab32c899d9789}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+if (0 == (expr)) \
+        { \
+                printf("%s:%d : CHECK: assertion failed: %s", __FILE__, 
+      __LINE__, #expr); \
+                exit(-1); \
+        }
+\end{DoxyCode}
+\hypertarget{bi__assert_8h_afb70bbb6de1ca63ed5eed1390510cb71}{\index{bi\-\_\-assert.\-h@{bi\-\_\-assert.\-h}!\-E\-N\-S\-U\-R\-E@{\-E\-N\-S\-U\-R\-E}}
+\index{\-E\-N\-S\-U\-R\-E@{\-E\-N\-S\-U\-R\-E}!bi_assert.h@{bi\-\_\-assert.\-h}}
+\subsubsection[{\-E\-N\-S\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-N\-S\-U\-R\-E}(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)}}\label{bi__assert_8h_afb70bbb6de1ca63ed5eed1390510cb71}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+if (0 == (expr)) \
+        { \
+                printf("%s:%d : ENSURE: assertion failed: %s", __FILE__, 
+      __LINE__, #expr); \
+                exit(-1); \
+        }
+\end{DoxyCode}
+\hypertarget{bi__assert_8h_ad9f2db71e103991db7d6f001a955285f}{\index{bi\-\_\-assert.\-h@{bi\-\_\-assert.\-h}!\-R\-E\-Q\-U\-I\-R\-E@{\-R\-E\-Q\-U\-I\-R\-E}}
+\index{\-R\-E\-Q\-U\-I\-R\-E@{\-R\-E\-Q\-U\-I\-R\-E}!bi_assert.h@{bi\-\_\-assert.\-h}}
+\subsubsection[{\-R\-E\-Q\-U\-I\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-E\-Q\-U\-I\-R\-E}(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)}}\label{bi__assert_8h_ad9f2db71e103991db7d6f001a955285f}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+if (0 == (expr)) \
+        { \
+                printf("%s:%d : REQUIRE: assertion failed: %s", __FILE__, 
+      __LINE__, #expr); \
+                exit(-1); \
+        }
+\end{DoxyCode}
