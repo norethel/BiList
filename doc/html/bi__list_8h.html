@@ -99,7 +99,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">BiList/inc/bi_list.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;stddef.h&gt;</code><br/>
+</div>
 <p><a href="bi__list_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
@@ -121,6 +122,20 @@ Data Structures</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">takes off the last element from the list  <a href="#a53d52e0166f2ca140e93b23256ea2e2f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="bi__element_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">TBiElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bi__list_8h.html#a14cc816069c35df41fcb1ad9ea100675">bi_list_back</a> (<a class="el" href="bi__list_8h.html#a022731eadf7426e98e6b164fdc3369c2">TBiList</a> *const _self)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">returns pointer to last element in the list  <a href="#a14cc816069c35df41fcb1ad9ea100675"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bi__list_8h.html#a5acde327f5ab065a9ef5ceed472eb54c">bi_list_push_front</a> (<a class="el" href="bi__list_8h.html#a022731eadf7426e98e6b164fdc3369c2">TBiList</a> *const _self, <a class="el" href="bi__element_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">TBiElement</a> *const _element)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">inserts element at the beginning of the list  <a href="#a5acde327f5ab065a9ef5ceed472eb54c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="bi__element_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">TBiElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bi__list_8h.html#ac8046b8f8c82447dfdc9f0155ab83748">bi_list_pop_front</a> (<a class="el" href="bi__list_8h.html#a022731eadf7426e98e6b164fdc3369c2">TBiList</a> *const _self)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">takes off the first element from the list  <a href="#ac8046b8f8c82447dfdc9f0155ab83748"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="bi__element_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">TBiElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bi__list_8h.html#ab0a2a5fc31b35e13fbbd392e54fcb8e5">bi_list_front</a> (<a class="el" href="bi__list_8h.html#a022731eadf7426e98e6b164fdc3369c2">TBiList</a> *const _self)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">returns pointer to first element in the list  <a href="#ab0a2a5fc31b35e13fbbd392e54fcb8e5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bi__list_8h.html#ac97fe45de184c9c434881c20fafa68c1">bi_list_size</a> (<a class="el" href="bi__list_8h.html#a022731eadf7426e98e6b164fdc3369c2">TBiList</a> *const _self)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">returns number of elements in the list  <a href="#ac97fe45de184c9c434881c20fafa68c1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bi__list_8h.html#aed8a5d9c37e4280558f3d327b38efaee">bi_list_clear</a> (<a class="el" href="bi__list_8h.html#a022731eadf7426e98e6b164fdc3369c2">TBiList</a> *const _self)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">clears list by taking off each element from the list note: this operation does not release elements if they were allocated dynamically or by other non-standard way  <a href="#aed8a5d9c37e4280558f3d327b38efaee"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bi__list_8h.html#adc009cfa5d0cedad2a660e4517210e2c">bi_list_insert</a> (<a class="el" href="bi__list_8h.html#a022731eadf7426e98e6b164fdc3369c2">TBiList</a> *const _self, <a class="el" href="bi__element_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">TBiElement</a> *const _pos, <a class="el" href="bi__element_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">TBiElement</a> *const _element)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">inserts element into list after one pointed by <b>_pos</b>  <a href="#adc009cfa5d0cedad2a660e4517210e2c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bi__list_8h.html#a0fdbf1b372b53f1e48a038b9d5af8192">bi_list_remove</a> (<a class="el" href="bi__list_8h.html#a022731eadf7426e98e6b164fdc3369c2">TBiList</a> *const _self, <a class="el" href="bi__element_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">TBiElement</a> *const _pos)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">removes given element from list  <a href="#a0fdbf1b372b53f1e48a038b9d5af8192"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><dl class="date"><dt><b>Date:</b></dt><dd>Feb 28, 2014 </dd></dl>
@@ -222,6 +237,33 @@ Data Structures</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aed8a5d9c37e4280558f3d327b38efaee"></a><!-- doxytag: member="bi_list.h::bi_list_clear" ref="aed8a5d9c37e4280558f3d327b38efaee" args="(TBiList *const _self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="bi__list_8h.html#aed8a5d9c37e4280558f3d327b38efaee">bi_list_clear</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bi__list_8h.html#a022731eadf7426e98e6b164fdc3369c2">TBiList</a> *const&#160;</td>
+          <td class="paramname"><em>_self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>clears list by taking off each element from the list note: this operation does not release elements if they were allocated dynamically or by other non-standard way </p>
+<dl class="pre"><dt><b>Precondition:</b></dt><dd>0 != _self </dd></dl>
+<dl class="post"><dt><b>Postcondition:</b></dt><dd>list is empty </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_self</td><td>pointer to list </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="ac05bb3c41e5bc0036f327ef75b4e8c6f"></a><!-- doxytag: member="bi_list.h::bi_list_ctor" ref="ac05bb3c41e5bc0036f327ef75b4e8c6f" args="(TBiList *const _self)" -->
 <div class="memitem">
 <div class="memproto">
@@ -304,6 +346,90 @@ list should be empty </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="ab0a2a5fc31b35e13fbbd392e54fcb8e5"></a><!-- doxytag: member="bi_list.h::bi_list_front" ref="ab0a2a5fc31b35e13fbbd392e54fcb8e5" args="(TBiList *const _self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bi__element_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">TBiElement</a>* <a class="el" href="bi__list_8h.html#ab0a2a5fc31b35e13fbbd392e54fcb8e5">bi_list_front</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bi__list_8h.html#a022731eadf7426e98e6b164fdc3369c2">TBiList</a> *const&#160;</td>
+          <td class="paramname"><em>_self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>returns pointer to first element in the list </p>
+<dl class="pre"><dt><b>Precondition:</b></dt><dd>0 != _self </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_self</td><td>pointer to list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>if list is not empty, a pointer to the first element in the list is returned, otherwise 0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adc009cfa5d0cedad2a660e4517210e2c"></a><!-- doxytag: member="bi_list.h::bi_list_insert" ref="adc009cfa5d0cedad2a660e4517210e2c" args="(TBiList *const _self, TBiElement *const _pos, TBiElement *const _element)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="bi__list_8h.html#adc009cfa5d0cedad2a660e4517210e2c">bi_list_insert</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bi__list_8h.html#a022731eadf7426e98e6b164fdc3369c2">TBiList</a> *const&#160;</td>
+          <td class="paramname"><em>_self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bi__element_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">TBiElement</a> *const&#160;</td>
+          <td class="paramname"><em>_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bi__element_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">TBiElement</a> *const&#160;</td>
+          <td class="paramname"><em>_element</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>inserts element into list after one pointed by <b>_pos</b> </p>
+<dl class="pre"><dt><b>Precondition:</b></dt><dd>0 != _self </dd>
+<dd>
+0 != _pos </dd>
+<dd>
+0 != _element </dd>
+<dd>
+list should not be empty </dd>
+<dd>
+position element is linked </dd>
+<dd>
+position element belongs to list </dd>
+<dd>
+element is not linked </dd></dl>
+<dl class="post"><dt><b>Postcondition:</b></dt><dd>element is linked of position element </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_self</td><td>pointer to list </td></tr>
+    <tr><td class="paramname">_pos</td><td>pointer to position element </td></tr>
+    <tr><td class="paramname">_element</td><td>pointer to element </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a53d52e0166f2ca140e93b23256ea2e2f"></a><!-- doxytag: member="bi_list.h::bi_list_pop_back" ref="a53d52e0166f2ca140e93b23256ea2e2f" args="(TBiList *const _self)" -->
 <div class="memitem">
 <div class="memproto">
@@ -322,6 +448,34 @@ list should be empty </dd></dl>
 <p>takes off the last element from the list </p>
 <dl class="pre"><dt><b>Precondition:</b></dt><dd>0 != _self </dd></dl>
 <dl class="post"><dt><b>Postcondition:</b></dt><dd>tail-&gt;prev is a new tail of the list </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_self</td><td>pointer to list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>if list is not empty, a pointer to taken element is returned, otherwise 0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac8046b8f8c82447dfdc9f0155ab83748"></a><!-- doxytag: member="bi_list.h::bi_list_pop_front" ref="ac8046b8f8c82447dfdc9f0155ab83748" args="(TBiList *const _self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bi__element_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">TBiElement</a>* <a class="el" href="bi__list_8h.html#ac8046b8f8c82447dfdc9f0155ab83748">bi_list_pop_front</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bi__list_8h.html#a022731eadf7426e98e6b164fdc3369c2">TBiList</a> *const&#160;</td>
+          <td class="paramname"><em>_self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>takes off the first element from the list </p>
+<dl class="pre"><dt><b>Precondition:</b></dt><dd>0 != _self </dd></dl>
+<dl class="post"><dt><b>Postcondition:</b></dt><dd>head-&gt;next is a new head of the list </dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">_self</td><td>pointer to list </td></tr>
@@ -378,6 +532,125 @@ if element is a first element of the list, it is also its head </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="a5acde327f5ab065a9ef5ceed472eb54c"></a><!-- doxytag: member="bi_list.h::bi_list_push_front" ref="a5acde327f5ab065a9ef5ceed472eb54c" args="(TBiList *const _self, TBiElement *const _element)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="bi__list_8h.html#a5acde327f5ab065a9ef5ceed472eb54c">bi_list_push_front</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bi__list_8h.html#a022731eadf7426e98e6b164fdc3369c2">TBiList</a> *const&#160;</td>
+          <td class="paramname"><em>_self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bi__element_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">TBiElement</a> *const&#160;</td>
+          <td class="paramname"><em>_element</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>inserts element at the beginning of the list </p>
+<dl class="pre"><dt><b>Precondition:</b></dt><dd>0 != _self </dd>
+<dd>
+0 != _element </dd>
+<dd>
+element is not linked </dd></dl>
+<dl class="post"><dt><b>Postcondition:</b></dt><dd>element is linked </dd>
+<dd>
+element is a new head of the list </dd>
+<dd>
+if element is a first element of the list, it is also its tail </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_self</td><td>pointer to list </td></tr>
+    <tr><td class="paramname">_element</td><td>pointer to element to be inserted </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0fdbf1b372b53f1e48a038b9d5af8192"></a><!-- doxytag: member="bi_list.h::bi_list_remove" ref="a0fdbf1b372b53f1e48a038b9d5af8192" args="(TBiList *const _self, TBiElement *const _pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="bi__list_8h.html#a0fdbf1b372b53f1e48a038b9d5af8192">bi_list_remove</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bi__list_8h.html#a022731eadf7426e98e6b164fdc3369c2">TBiList</a> *const&#160;</td>
+          <td class="paramname"><em>_self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="bi__element_8h.html#a50efceeb7874dfcc17d3efc7e4ec90ca">TBiElement</a> *const&#160;</td>
+          <td class="paramname"><em>_pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>removes given element from list </p>
+<dl class="pre"><dt><b>Precondition:</b></dt><dd>0 != _self </dd>
+<dd>
+0 != _pos </dd>
+<dd>
+list should not be empty </dd>
+<dd>
+position element is linked </dd>
+<dd>
+position element belongs to list </dd></dl>
+<dl class="post"><dt><b>Postcondition:</b></dt><dd>position element is not linked </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_self</td><td>pointer to list </td></tr>
+    <tr><td class="paramname">_pos</td><td>pointer to position element </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac97fe45de184c9c434881c20fafa68c1"></a><!-- doxytag: member="bi_list.h::bi_list_size" ref="ac97fe45de184c9c434881c20fafa68c1" args="(TBiList *const _self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="bi__list_8h.html#ac97fe45de184c9c434881c20fafa68c1">bi_list_size</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bi__list_8h.html#a022731eadf7426e98e6b164fdc3369c2">TBiList</a> *const&#160;</td>
+          <td class="paramname"><em>_self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>returns number of elements in the list </p>
+<dl class="pre"><dt><b>Precondition:</b></dt><dd>0 != _self </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_self</td><td>pointer to list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>number of list elements. 0 if list is empty </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -398,7 +671,7 @@ if element is a first element of the list, it is also its head </dd></dl>
     <ul>
       <li class="navelem"><a class="el" href="bi__list_8h.html">bi_list.h</a>      </li>
 
-    <li class="footer">Generated on Fri Feb 28 2014 16:02:19 for Bidirectional Intrusive List by
+    <li class="footer">Generated on Thu Mar 6 2014 17:20:19 for Bidirectional Intrusive List by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

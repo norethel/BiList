@@ -1,6 +1,7 @@
 \hypertarget{bi__list_8h}{\section{\-Bi\-List/inc/bi\-\_\-list.h \-File \-Reference}
 \label{bi__list_8h}\index{\-Bi\-List/inc/bi\-\_\-list.\-h@{\-Bi\-List/inc/bi\-\_\-list.\-h}}
 }
+{\ttfamily \#include $<$stddef.\-h$>$}\*
 \subsection*{\-Data \-Structures}
 \begin{DoxyCompactItemize}
 \item 
@@ -25,7 +26,21 @@ void \hyperlink{bi__list_8h_aa53e556e8aefaf5d1edcb5c74290b971}{bi\-\_\-list\-\_\
 \hyperlink{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\-T\-Bi\-Element} $\ast$ \hyperlink{bi__list_8h_a53d52e0166f2ca140e93b23256ea2e2f}{bi\-\_\-list\-\_\-pop\-\_\-back} (\hyperlink{bi__list_8h_a022731eadf7426e98e6b164fdc3369c2}{\-T\-Bi\-List} $\ast$const \-\_\-self)
 \begin{DoxyCompactList}\small\item\em takes off the last element from the list \end{DoxyCompactList}\item 
 \hyperlink{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\-T\-Bi\-Element} $\ast$ \hyperlink{bi__list_8h_a14cc816069c35df41fcb1ad9ea100675}{bi\-\_\-list\-\_\-back} (\hyperlink{bi__list_8h_a022731eadf7426e98e6b164fdc3369c2}{\-T\-Bi\-List} $\ast$const \-\_\-self)
-\begin{DoxyCompactList}\small\item\em returns pointer to last element in the list \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em returns pointer to last element in the list \end{DoxyCompactList}\item 
+void \hyperlink{bi__list_8h_a5acde327f5ab065a9ef5ceed472eb54c}{bi\-\_\-list\-\_\-push\-\_\-front} (\hyperlink{bi__list_8h_a022731eadf7426e98e6b164fdc3369c2}{\-T\-Bi\-List} $\ast$const \-\_\-self, \hyperlink{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\-T\-Bi\-Element} $\ast$const \-\_\-element)
+\begin{DoxyCompactList}\small\item\em inserts element at the beginning of the list \end{DoxyCompactList}\item 
+\hyperlink{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\-T\-Bi\-Element} $\ast$ \hyperlink{bi__list_8h_ac8046b8f8c82447dfdc9f0155ab83748}{bi\-\_\-list\-\_\-pop\-\_\-front} (\hyperlink{bi__list_8h_a022731eadf7426e98e6b164fdc3369c2}{\-T\-Bi\-List} $\ast$const \-\_\-self)
+\begin{DoxyCompactList}\small\item\em takes off the first element from the list \end{DoxyCompactList}\item 
+\hyperlink{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\-T\-Bi\-Element} $\ast$ \hyperlink{bi__list_8h_ab0a2a5fc31b35e13fbbd392e54fcb8e5}{bi\-\_\-list\-\_\-front} (\hyperlink{bi__list_8h_a022731eadf7426e98e6b164fdc3369c2}{\-T\-Bi\-List} $\ast$const \-\_\-self)
+\begin{DoxyCompactList}\small\item\em returns pointer to first element in the list \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{bi__list_8h_ac97fe45de184c9c434881c20fafa68c1}{bi\-\_\-list\-\_\-size} (\hyperlink{bi__list_8h_a022731eadf7426e98e6b164fdc3369c2}{\-T\-Bi\-List} $\ast$const \-\_\-self)
+\begin{DoxyCompactList}\small\item\em returns number of elements in the list \end{DoxyCompactList}\item 
+void \hyperlink{bi__list_8h_aed8a5d9c37e4280558f3d327b38efaee}{bi\-\_\-list\-\_\-clear} (\hyperlink{bi__list_8h_a022731eadf7426e98e6b164fdc3369c2}{\-T\-Bi\-List} $\ast$const \-\_\-self)
+\begin{DoxyCompactList}\small\item\em clears list by taking off each element from the list note\-: this operation does not release elements if they were allocated dynamically or by other non-\/standard way \end{DoxyCompactList}\item 
+void \hyperlink{bi__list_8h_adc009cfa5d0cedad2a660e4517210e2c}{bi\-\_\-list\-\_\-insert} (\hyperlink{bi__list_8h_a022731eadf7426e98e6b164fdc3369c2}{\-T\-Bi\-List} $\ast$const \-\_\-self, \hyperlink{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\-T\-Bi\-Element} $\ast$const \-\_\-pos, \hyperlink{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\-T\-Bi\-Element} $\ast$const \-\_\-element)
+\begin{DoxyCompactList}\small\item\em inserts element into list after one pointed by {\bfseries \-\_\-pos} \end{DoxyCompactList}\item 
+void \hyperlink{bi__list_8h_a0fdbf1b372b53f1e48a038b9d5af8192}{bi\-\_\-list\-\_\-remove} (\hyperlink{bi__list_8h_a022731eadf7426e98e6b164fdc3369c2}{\-T\-Bi\-List} $\ast$const \-\_\-self, \hyperlink{bi__element_8h_a50efceeb7874dfcc17d3efc7e4ec90ca}{\-T\-Bi\-Element} $\ast$const \-\_\-pos)
+\begin{DoxyCompactList}\small\item\em removes given element from list \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{\-Detailed \-Description}
@@ -96,6 +111,28 @@ constructs list from another one {\bfseries \-W\-A\-R\-N\-I\-N\-G\-:} it is in u
 {\em \-\_\-list} & pointer to list from which {\bfseries \-\_\-self} needs to be constructed \\
 \hline
 \end{DoxyParams}
+\hypertarget{bi__list_8h_aed8a5d9c37e4280558f3d327b38efaee}{\index{bi\-\_\-list.\-h@{bi\-\_\-list.\-h}!bi\-\_\-list\-\_\-clear@{bi\-\_\-list\-\_\-clear}}
+\index{bi\-\_\-list\-\_\-clear@{bi\-\_\-list\-\_\-clear}!bi_list.h@{bi\-\_\-list.\-h}}
+\subsubsection[{bi\-\_\-list\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf bi\-\_\-list\-\_\-clear} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-T\-Bi\-List} $\ast$const}]{\-\_\-self}
+\end{DoxyParamCaption}
+)}}\label{bi__list_8h_aed8a5d9c37e4280558f3d327b38efaee}
+
+
+clears list by taking off each element from the list note\-: this operation does not release elements if they were allocated dynamically or by other non-\/standard way 
+
+\begin{DoxyPrecond}{\-Precondition}
+0 != \-\_\-self 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+list is empty 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-\_\-self} & pointer to list \\
+\hline
+\end{DoxyParams}
 \hypertarget{bi__list_8h_ac05bb3c41e5bc0036f327ef75b4e8c6f}{\index{bi\-\_\-list.\-h@{bi\-\_\-list.\-h}!bi\-\_\-list\-\_\-ctor@{bi\-\_\-list\-\_\-ctor}}
 \index{bi\-\_\-list\-\_\-ctor@{bi\-\_\-list\-\_\-ctor}!bi_list.h@{bi\-\_\-list.\-h}}
 \subsubsection[{bi\-\_\-list\-\_\-ctor}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf bi\-\_\-list\-\_\-ctor} (
@@ -161,6 +198,68 @@ checks if list is empty
 \begin{DoxyReturn}{\-Returns}
 if list is empty the return value is greater than 0 (usually 1), otherwise 0 
 \end{DoxyReturn}
+\hypertarget{bi__list_8h_ab0a2a5fc31b35e13fbbd392e54fcb8e5}{\index{bi\-\_\-list.\-h@{bi\-\_\-list.\-h}!bi\-\_\-list\-\_\-front@{bi\-\_\-list\-\_\-front}}
+\index{bi\-\_\-list\-\_\-front@{bi\-\_\-list\-\_\-front}!bi_list.h@{bi\-\_\-list.\-h}}
+\subsubsection[{bi\-\_\-list\-\_\-front}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-Bi\-Element}$\ast$ {\bf bi\-\_\-list\-\_\-front} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-T\-Bi\-List} $\ast$const}]{\-\_\-self}
+\end{DoxyParamCaption}
+)}}\label{bi__list_8h_ab0a2a5fc31b35e13fbbd392e54fcb8e5}
+
+
+returns pointer to first element in the list 
+
+\begin{DoxyPrecond}{\-Precondition}
+0 != \-\_\-self 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-\_\-self} & pointer to list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+if list is not empty, a pointer to the first element in the list is returned, otherwise 0 
+\end{DoxyReturn}
+\hypertarget{bi__list_8h_adc009cfa5d0cedad2a660e4517210e2c}{\index{bi\-\_\-list.\-h@{bi\-\_\-list.\-h}!bi\-\_\-list\-\_\-insert@{bi\-\_\-list\-\_\-insert}}
+\index{bi\-\_\-list\-\_\-insert@{bi\-\_\-list\-\_\-insert}!bi_list.h@{bi\-\_\-list.\-h}}
+\subsubsection[{bi\-\_\-list\-\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf bi\-\_\-list\-\_\-insert} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-T\-Bi\-List} $\ast$const}]{\-\_\-self, }
+\item[{{\bf \-T\-Bi\-Element} $\ast$const}]{\-\_\-pos, }
+\item[{{\bf \-T\-Bi\-Element} $\ast$const}]{\-\_\-element}
+\end{DoxyParamCaption}
+)}}\label{bi__list_8h_adc009cfa5d0cedad2a660e4517210e2c}
+
+
+inserts element into list after one pointed by {\bfseries \-\_\-pos} 
+
+\begin{DoxyPrecond}{\-Precondition}
+0 != \-\_\-self 
+
+0 != \-\_\-pos 
+
+0 != \-\_\-element 
+
+list should not be empty 
+
+position element is linked 
+
+position element belongs to list 
+
+element is not linked 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+element is linked of position element 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-\_\-self} & pointer to list \\
+\hline
+{\em \-\_\-pos} & pointer to position element \\
+\hline
+{\em \-\_\-element} & pointer to element \\
+\hline
+\end{DoxyParams}
 \hypertarget{bi__list_8h_a53d52e0166f2ca140e93b23256ea2e2f}{\index{bi\-\_\-list.\-h@{bi\-\_\-list.\-h}!bi\-\_\-list\-\_\-pop\-\_\-back@{bi\-\_\-list\-\_\-pop\-\_\-back}}
 \index{bi\-\_\-list\-\_\-pop\-\_\-back@{bi\-\_\-list\-\_\-pop\-\_\-back}!bi_list.h@{bi\-\_\-list.\-h}}
 \subsubsection[{bi\-\_\-list\-\_\-pop\-\_\-back}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-Bi\-Element}$\ast$ {\bf bi\-\_\-list\-\_\-pop\-\_\-back} (
@@ -177,6 +276,31 @@ takes off the last element from the list
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{\-Postcondition}
 tail-\/$>$prev is a new tail of the list 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-\_\-self} & pointer to list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+if list is not empty, a pointer to taken element is returned, otherwise 0 
+\end{DoxyReturn}
+\hypertarget{bi__list_8h_ac8046b8f8c82447dfdc9f0155ab83748}{\index{bi\-\_\-list.\-h@{bi\-\_\-list.\-h}!bi\-\_\-list\-\_\-pop\-\_\-front@{bi\-\_\-list\-\_\-pop\-\_\-front}}
+\index{bi\-\_\-list\-\_\-pop\-\_\-front@{bi\-\_\-list\-\_\-pop\-\_\-front}!bi_list.h@{bi\-\_\-list.\-h}}
+\subsubsection[{bi\-\_\-list\-\_\-pop\-\_\-front}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-T\-Bi\-Element}$\ast$ {\bf bi\-\_\-list\-\_\-pop\-\_\-front} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-T\-Bi\-List} $\ast$const}]{\-\_\-self}
+\end{DoxyParamCaption}
+)}}\label{bi__list_8h_ac8046b8f8c82447dfdc9f0155ab83748}
+
+
+takes off the first element from the list 
+
+\begin{DoxyPrecond}{\-Precondition}
+0 != \-\_\-self 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+head-\/$>$next is a new head of the list 
 \end{DoxyPostcond}
 
 \begin{DoxyParams}{\-Parameters}
@@ -219,3 +343,91 @@ if element is a first element of the list, it is also its head
 {\em \-\_\-element} & pointer to element to be added to list \\
 \hline
 \end{DoxyParams}
+\hypertarget{bi__list_8h_a5acde327f5ab065a9ef5ceed472eb54c}{\index{bi\-\_\-list.\-h@{bi\-\_\-list.\-h}!bi\-\_\-list\-\_\-push\-\_\-front@{bi\-\_\-list\-\_\-push\-\_\-front}}
+\index{bi\-\_\-list\-\_\-push\-\_\-front@{bi\-\_\-list\-\_\-push\-\_\-front}!bi_list.h@{bi\-\_\-list.\-h}}
+\subsubsection[{bi\-\_\-list\-\_\-push\-\_\-front}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf bi\-\_\-list\-\_\-push\-\_\-front} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-T\-Bi\-List} $\ast$const}]{\-\_\-self, }
+\item[{{\bf \-T\-Bi\-Element} $\ast$const}]{\-\_\-element}
+\end{DoxyParamCaption}
+)}}\label{bi__list_8h_a5acde327f5ab065a9ef5ceed472eb54c}
+
+
+inserts element at the beginning of the list 
+
+\begin{DoxyPrecond}{\-Precondition}
+0 != \-\_\-self 
+
+0 != \-\_\-element 
+
+element is not linked 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+element is linked 
+
+element is a new head of the list 
+
+if element is a first element of the list, it is also its tail 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-\_\-self} & pointer to list \\
+\hline
+{\em \-\_\-element} & pointer to element to be inserted \\
+\hline
+\end{DoxyParams}
+\hypertarget{bi__list_8h_a0fdbf1b372b53f1e48a038b9d5af8192}{\index{bi\-\_\-list.\-h@{bi\-\_\-list.\-h}!bi\-\_\-list\-\_\-remove@{bi\-\_\-list\-\_\-remove}}
+\index{bi\-\_\-list\-\_\-remove@{bi\-\_\-list\-\_\-remove}!bi_list.h@{bi\-\_\-list.\-h}}
+\subsubsection[{bi\-\_\-list\-\_\-remove}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf bi\-\_\-list\-\_\-remove} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-T\-Bi\-List} $\ast$const}]{\-\_\-self, }
+\item[{{\bf \-T\-Bi\-Element} $\ast$const}]{\-\_\-pos}
+\end{DoxyParamCaption}
+)}}\label{bi__list_8h_a0fdbf1b372b53f1e48a038b9d5af8192}
+
+
+removes given element from list 
+
+\begin{DoxyPrecond}{\-Precondition}
+0 != \-\_\-self 
+
+0 != \-\_\-pos 
+
+list should not be empty 
+
+position element is linked 
+
+position element belongs to list 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+position element is not linked 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-\_\-self} & pointer to list \\
+\hline
+{\em \-\_\-pos} & pointer to position element \\
+\hline
+\end{DoxyParams}
+\hypertarget{bi__list_8h_ac97fe45de184c9c434881c20fafa68c1}{\index{bi\-\_\-list.\-h@{bi\-\_\-list.\-h}!bi\-\_\-list\-\_\-size@{bi\-\_\-list\-\_\-size}}
+\index{bi\-\_\-list\-\_\-size@{bi\-\_\-list\-\_\-size}!bi_list.h@{bi\-\_\-list.\-h}}
+\subsubsection[{bi\-\_\-list\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf bi\-\_\-list\-\_\-size} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-T\-Bi\-List} $\ast$const}]{\-\_\-self}
+\end{DoxyParamCaption}
+)}}\label{bi__list_8h_ac97fe45de184c9c434881c20fafa68c1}
+
+
+returns number of elements in the list 
+
+\begin{DoxyPrecond}{\-Precondition}
+0 != \-\_\-self 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-\_\-self} & pointer to list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+number of list elements. 0 if list is empty 
+\end{DoxyReturn}
