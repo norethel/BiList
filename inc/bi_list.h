@@ -15,6 +15,8 @@ extern "C"
 {
 #endif
 
+#include <stddef.h> /* size_t */
+
 /** forward declaration of TBiElement */
 typedef struct SBiElement TBiElement;
 
@@ -99,6 +101,87 @@ TBiElement* bi_list_pop_back(TBiList* const _self);
  * is returned, otherwise 0
  */
 TBiElement* bi_list_back(TBiList* const _self);
+
+/**
+ * @brief inserts element at the beginning of the list
+ * @pre 0 != _self
+ * @pre 0 != _element
+ * @pre element is not linked
+ * @post element is linked
+ * @post element is a new head of the list
+ * @post if element is a first element of the list, it is also its tail
+ * @param _self pointer to list
+ * @param _element pointer to element to be inserted
+ */
+void bi_list_push_front(TBiList* const _self, TBiElement* const _element);
+
+/**
+ * @brief takes off the first element from the list
+ * @pre 0 != _self
+ * @post head->next is a new head of the list
+ * @param _self pointer to list
+ * @return if list is not empty, a pointer to taken element is returned,
+ * otherwise 0
+ */
+TBiElement* bi_list_pop_front(TBiList* const _self);
+
+/**
+ * @brief returns pointer to first element in the list
+ * @pre 0 != _self
+ * @param _self pointer to list
+ * @return if list is not empty, a pointer to the first element in the list
+ * is returned, otherwise 0
+ */
+TBiElement* bi_list_front(TBiList* const _self);
+
+/**
+ * @brief returns number of elements in the list
+ * @pre 0 != _self
+ * @param _self pointer to list
+ * @return number of list elements. 0 if list is empty
+ */
+size_t bi_list_size(TBiList* const _self);
+
+/**
+ * @brief clears list by taking off each element from the list
+ * note: this operation does not release elements if they were
+ * allocated dynamically or by other non-standard way
+ * @pre 0 != _self
+ * @post list is empty
+ * @param _self pointer to list
+ */
+void bi_list_clear(TBiList* const _self);
+
+/**
+ * @brief inserts element into list after one pointed by @b _pos
+ * @pre 0 != _self
+ * @pre 0 != _pos
+ * @pre 0 != _element
+ * @pre list should not be empty
+ * @pre position element is linked
+ * @pre position element belongs to list
+ * @pre element is not linked
+ * @post element is linked
+ * of position element
+ * @param _self pointer to list
+ * @param _pos pointer to position element
+ * @param _element pointer to element
+ */
+void bi_list_insert(TBiList* const _self, TBiElement* const _pos,
+        TBiElement* const _element);
+
+/**
+ * @brief removes given element from list
+ * @pre 0 != _self
+ * @pre 0 != _pos
+ * @pre list should not be empty
+ * @pre position element is linked
+ * @pre position element belongs to list
+ * @post position element is not linked
+ * @param _self pointer to list
+ * @param _pos pointer to position element
+ */
+void bi_list_remove(TBiList* const _self, TBiElement* const _pos);
 
 #ifdef __cplusplus
 }
