@@ -1,12 +1,3 @@
-/**
- * @file bi_element_test.h
- *
- * @date Feb 25, 2014
- * @author norethel
- *
- * @{
- */
-
 #ifndef __BI_ELEMENT_TEST_H__
 #define __BI_ELEMENT_TEST_H__
 
@@ -44,4 +35,3 @@ extern CU_TestInfo bi_element_tests[];
 #endif
 
 #endif
-/** __BI_ELEMENT_TEST_H__ @} */

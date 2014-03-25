@@ -1,12 +1,3 @@
-/**
- * @file bi_list_test.h
- *
- * @date Feb 28, 2014
- * @author norethel
- *
- * @{
- */
-
 #ifndef __BI_LIST_TEST_H__
 #define __BI_LIST_TEST_H__
 
@@ -72,4 +63,3 @@ extern CU_TestInfo bi_list_tests[];
 #endif
 
 #endif
-/** __BI_LIST_TEST_H__ @} */

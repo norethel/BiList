@@ -84,3 +84,10 @@ TBiElement* bi_list_iterator_deref(TBiListIterator* const _self)
 
 	return _self->current;
 }
+
+int bi_list_iterator_end(TBiListIterator* const _self)
+{
+	REQUIRE(0 != _self);
+
+	return !(0 != _self->current);
+}

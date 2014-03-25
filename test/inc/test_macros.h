@@ -1,12 +1,3 @@
-/**
- * @file test_macros.h
- *
- * @date Feb 27, 2014
- * @author norethel
- *
- * @{
- */
-
 #ifndef __TEST_MACROS_H__
 #define __TEST_MACROS_H__
 
@@ -30,4 +21,3 @@ typedef enum
 #endif
 
 #endif
-/** __TEST_MACROS_H__ @} */

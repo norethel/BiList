@@ -109,9 +109,18 @@ void bi_list_iterator_rrewind(TBiListIterator* const _self);
  * it currently points
  * @param _self pointer to iterator
  * @pre iterator is initialized with a valid list pointer
- * @return element or 0 if list is empty or iterator reached the iteration end.
+ * @return element or 0 if list is empty or iterator reached the iteration end
  */
 TBiElement* bi_list_iterator_deref(TBiListIterator* const _self);
+
+/**
+ * @brief checks if iterator has reached the end of the list
+ * @pre 0 != _self
+ * @param _self pointer to iterator
+ * @return returns value different from 0 (usually 1)
+ * if iterator reached the end of the list, otherwise returns 0
+ */
+int bi_list_iterator_end(TBiListIterator* const _self);
 
 #ifdef __cplusplus
 }
